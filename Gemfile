@@ -26,6 +26,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use bootstrap for adding css and js
 gem 'bootstrap-sass', '~> 3.3.6'
 
+# Use it to create pagination
+gem 'will_paginate', '~> 3.1.1'
+# Use it to format will_paginate view visual
+gem 'bootstrap-will_paginate'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
