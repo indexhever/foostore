@@ -1,3 +1,10 @@
 <li id="product-<%= product.id %>">
-	<span class="content"><%= I18n.locale.to_s == "en" ? product.description_en : product.description_pt %></span>
+	<a href="<%= product_path(product) %>">
+		<span class="cover">
+			<img src="<%= product.cover %>" alt="A product image" />
+		</span>
+		<span class="content">
+			<%= I18n.locale.to_s == "en" ? product.description_en : product.description_pt %>
+		</span>
+	</a>	
 </li>

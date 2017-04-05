@@ -1,4 +1,8 @@
 pt:
-  hello: "Oi Mundo"
-  catalog: "Catálogo"
   games: "Jogos"
+  static_pages:
+    home:
+      catalog: "Catálogo"  
+  will_paginate:
+    previous_label: "&#8592; Anterior"
+    next_label: "Próximo &#8594;"

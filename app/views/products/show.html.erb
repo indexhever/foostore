@@ -1,0 +1,12 @@
+<% provide(:title, @product.name) %>
+<div class="row">
+	<aside class="col-md-4">
+		<section>
+			<img src="<%= @product.cover %>"> 
+		</section>
+	</aside>
+	<div class="col-md-8">
+			<h1><%= @product.name %></h1>
+			<h3><%= I18n.locale.to_s == "en" ? @product.description_en : @product.description_pt %></h3>
+	</div>
+</div>
