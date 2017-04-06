@@ -1,5 +1,9 @@
 pt:
   games: "Jogos"
+  home: "Página inicial"
+  login: "Entrar"
+  search: "Pesquisar"
+  search_game: "Pesquisar jogo"
   static_pages:
     home:
       catalog: "Catálogo"  

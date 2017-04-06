@@ -21,6 +21,10 @@
 
 en:
   games: "Games"
+  home: "Home"
+  login: "Log in"
+  search: "Search"
+  search_game: "Search game"
   static_pages:
     home:
       catalog: "Catalog"

@@ -1,5 +1,11 @@
 <% provide(:title, t(:games)) %>
+
 <h1><%= t '.catalog' %></h1>
+
+<form class="search" action="" accept-charset="UTF-8" method="get"><input name="utf8" value="✓" type="hidden">
+  <input class="form-control" name="looking_for" id="looking_for" placeholder="<%= t :search_game %>" type="text">
+  <input class="btn btn-primary" name="commit" value="<%= t :search %>" type="submit">
+</form>
 
 <div class="row">
 	<div class="col-md-8">
