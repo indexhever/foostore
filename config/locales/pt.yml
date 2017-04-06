@@ -1,12 +1,20 @@
 pt:
   games: "Jogos"
+  products: "Produtos"
   home: "Página inicial"
   login: "Entrar"
+  logout: "Sair"
   search: "Pesquisar"
   search_game: "Pesquisar jogo"
+  language: "Idioma"
+  change: "Mudar"
   static_pages:
     home:
       catalog: "Catálogo"  
   will_paginate:
     previous_label: "&#8592; Anterior"
     next_label: "Próximo &#8594;"
+  helpers:
+    label:
+      session:
+        password: "Senha"

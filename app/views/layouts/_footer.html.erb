@@ -3,4 +3,25 @@
 		The Foostore
 		by <a href="https://br.linkedin.com/in/hevertonsarah">Heverton Sarah</a>
 	</small>
+	<nav>
+		<ul>
+			<li>
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<%= form_tag(localize_path, method: "post") do %>
+							<%= label_tag(:language, t(:language)) %>
+							<%= select_tag(:language, 
+									options_for_select(
+										[['English', 'en'], ['Português', 'pt']], 
+										get_locale
+									)
+								) 
+							%>
+							<%= submit_tag t(:change), class: "btn btn-primary" %>
+						<% end %>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</nav>
 </footer>

@@ -21,13 +21,21 @@
 
 en:
   games: "Games"
+  products: "Products"
   home: "Home"
   login: "Log in"
+  logout: "Log out"
   search: "Search"
   search_game: "Search game"
+  language: "Language"
+  change: "Change"
   static_pages:
     home:
       catalog: "Catalog"
   will_paginate:
     previous_label: "&#8592; Previous"
     next_label: "Next &#8594;"
+  helpers:
+    label:
+      session:
+        password: "Password"
