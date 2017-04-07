@@ -3,6 +3,11 @@ class ProductsController < ApplicationController
 		@product = Product.find(params[:id])
 	end
 
+	def index
+		@search_term = params[:looking_for]
+		@products = @search_term ? Product.where(name: @search_term).paginate(page: params[:page]) : Product.paginate(page: params[:page])
+	end
+
 	def new
 	end
 
@@ -24,11 +29,16 @@ class ProductsController < ApplicationController
 		end
 	end
 
+	def destroy
+		@product.destroy
+		flash[:success] = "Product deleted"
+		redirect_to request.referrer || root_url
+	end
+
 	private
 		#prevent mass assignment vulnerability
 		def product_params
-			params.require(:product).permit(:name, :description_en, :description_pt,
-											:category, :status)
+			params.require(:product).permit(:name, :description_en, :description_pt, :cover, :category, :status)
 		end
 
 end

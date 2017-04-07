@@ -1,0 +1,37 @@
+<% provide(:title, t(:admin)) %>
+
+<h1><%= t(:admin) %></h1>
+
+<form class="search" action="" accept-charset="UTF-8" method="get"><input name="utf8" value="✓" type="hidden">
+  <input class="form-control" name="looking_for" id="looking_for" placeholder="<%= t :search_game %>" type="text">
+  <input class="btn btn-primary" name="commit" value="<%= t :search %>" type="submit">
+</form>
+
+<div class="row">
+	<div class="col-md-8">
+		<% if @products.any? %>
+			<%= will_paginate @products %>
+				<ul class="products_edit">
+					<% @products.each do |product| %>
+						<li id="product-<%= product.id %>">
+							<span class="cover">
+								<img src="<%= product.cover %>" alt="A product image" />
+							</span>
+							<span><%= product.name %></span>
+							<span class="content">
+								<%= I18n.locale.to_s == "en" ? product.description_en : product.description_pt %>
+							</span>
+							<span class="edit">
+								<%= link_to "edit", edit_product_path(product) %>
+							</span>
+							<span class="delete">
+								<%= link_to "delete", product, method: :delete, 
+											 data: { confirm: "You sure?" } %>
+							</span>
+						</li>
+					<% end %>					
+				</ul>
+			<%= will_paginate @products %>
+		<% end %>
+	</div>
+</div>
