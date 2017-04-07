@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+	before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
+	before_action :admin_user, only: [:index, :edit, :update, :destroy]
 	def show
 		@product = Product.find(params[:id])
 	end
@@ -30,8 +32,8 @@ class ProductsController < ApplicationController
 	end
 
 	def destroy
-		@product.destroy
-		flash[:success] = "Product deleted"
+		Product.find(params[:id]).destroy
+		flash[:success] = t(:product_deleted)
 		redirect_to request.referrer || root_url
 	end
 
@@ -40,5 +42,10 @@ class ProductsController < ApplicationController
 		def product_params
 			params.require(:product).permit(:name, :description_en, :description_pt, :cover, :category, :status)
 		end
+
+		# Confirms an admin user.
+	    def admin_user
+	      redirect_to(root_url) unless current_user.admin?
+	    end
 
 end

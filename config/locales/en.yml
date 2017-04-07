@@ -40,6 +40,11 @@ en:
   published: "Published"
   not_published: "Not Published"
   profile_updated: "Product updated"
+  please_login: "Please log in"
+  product_deleted: "Product deleted"
+  you_sure: "You sure?"
+  edit: "Edit"
+  delete: "Delete"
   static_pages:
     home:
       catalog: "Catalog"

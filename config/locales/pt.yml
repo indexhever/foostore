@@ -21,6 +21,11 @@ pt:
   published: "Publicado"
   not_published: "Não Publicado"
   profile_updated: "Produto atualizado"
+  please_login: "Por favor, entre primeiramente"
+  product_deleted: "Produto deletado"
+  you_sure: "Voce tem certeza?"
+  edit: "Editar"
+  delete: "Deletar"
   static_pages:
     home:
       catalog: "Catálogo"  

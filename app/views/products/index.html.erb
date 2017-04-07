@@ -22,11 +22,11 @@
 								<%= I18n.locale.to_s == "en" ? product.description_en : product.description_pt %>
 							</span>
 							<span class="edit">
-								<%= link_to "edit", edit_product_path(product) %>
+								<%= link_to t(:edit), edit_product_path(product) %>
 							</span>
 							<span class="delete">
-								<%= link_to "delete", product, method: :delete, 
-											 data: { confirm: "You sure?" } %>
+								<%= link_to t(:delete), product, method: :delete, 
+											 data: { confirm: t(:you_sure) } %>
 							</span>
 						</li>
 					<% end %>					
