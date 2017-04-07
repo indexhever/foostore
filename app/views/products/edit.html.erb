@@ -1,0 +1,30 @@
+<% provide(:title, t(:update_product)) %>
+<h1><%= t(:update_product) %></h1>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<%= form_for(@product) do |f| %>
+			<%= render 'shared/error_messages', object: f.object %>
+			<%= f.label :name %>
+			<%= f.text_field :name, class: 'form-control' %>
+			<%= f.label :description_en, t(:description) %>
+			<%= f.text_area :description_en, class: 'form-control' %>
+			<%= f.label :description_pt, t(:description) %>
+			<%= f.text_area :description_pt, class: 'form-control' %>
+			<%= f.label :category, t(:category) %>
+			<%= f.select(:category, 
+					[[t(:action), '1'], [t(:adventure), '2'], [t(:shooter), '3'], [t(:horror), '4']],
+					{},
+					{ :class => 'form-control' }
+				) 
+			%>
+			<%= f.label :status, "Status" %>
+			<%= f.select(:status, 
+					[[t(:published), true], [t(:not_published), false]],
+					{},
+					{ :class => 'form-control' }
+				) 
+			%>
+			<%= f.submit t(:save_changes), class: "btn btn-primary" %>
+		<% end %>
+	</div>
+</div>

@@ -6,12 +6,17 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+User.create!(name: "Admin User",
+			 email: "admin@foostore.com",
+			 password: "admin123",
+			 password_confirmation: "admin123")
+
 99.times do |n|
 	name = "Example-#{n+1}"
 	description_en = "Description English#{n+1}"
 	description_pt = "Descrição Português#{n+1}"
 	cover = "http://www.imagesource.com/Doc/IS0/Media/TR5/2/4/2/0/IE236-086.jpg"
-	category = "Game"
+	category = 1
 	status = true
 	Product.create!(name: name,
 					description_en: description_en,

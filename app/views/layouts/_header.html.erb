@@ -5,7 +5,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><%= link_to t(:home), root_path %></li>
 				<% if logged_in? %>
-					<li><%= link_to t(:products), "#" %></li>
+					<li><%= link_to t(:admin), "#" %></li>
 					<li>
 						<%= link_to t(:logout), logout_path, method: "delete" %>
 					</li>

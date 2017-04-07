@@ -1,13 +1,26 @@
 pt:
   games: "Jogos"
-  products: "Produtos"
+  admin: "Administrar"
   home: "Página inicial"
   login: "Entrar"
   logout: "Sair"
   search: "Pesquisar"
   search_game: "Pesquisar jogo"
+  update_product: "Editar Produto"
   language: "Idioma"
   change: "Mudar"
+  description: "Descrição"
+  description_en: "Descrição"
+  description_pt: "Descrição"
+  category: "Categoria"
+  save_changes: "Salvar mudanças"
+  action: "Ação"
+  adventure: "Aventura"
+  shooter: "Tiro"
+  horror: "Terror"
+  published: "Publicado"
+  not_published: "Não Publicado"
+  profile_updated: "Produto atualizado"
   static_pages:
     home:
       catalog: "Catálogo"  
@@ -18,3 +31,24 @@ pt:
     label:
       session:
         password: "Senha"
+      product:
+        name: "Nome"
+  activerecord:
+    errors:
+      models:
+        product:
+          attributes:
+            name:
+              blank: "está vazio"
+            description_en:
+              blank: "está vazio"
+            description_pt:
+              blank: "está vazio"
+            category:
+              blank: "está vazio"
+    attributes:
+      product:
+        name: "Nome"
+        description_en: "Descrição em Inglês"
+        description_pt: "Descrição em Português"
+        category: "Categoria"

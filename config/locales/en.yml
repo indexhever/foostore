@@ -21,14 +21,25 @@
 
 en:
   games: "Games"
-  products: "Products"
+  admin: "Admin"
   home: "Home"
   login: "Log in"
   logout: "Log out"
   search: "Search"
   search_game: "Search game"
+  update_product: "Update Product"
   language: "Language"
   change: "Change"
+  description: "Description"
+  category: "Category"
+  save_changes: "Save changes"
+  action: "Action"
+  adventure: "Adventure"
+  shooter: "Shooter"
+  horror: "Horror"
+  published: "Published"
+  not_published: "Not Published"
+  profile_updated: "Product updated"
   static_pages:
     home:
       catalog: "Catalog"
@@ -39,3 +50,24 @@ en:
     label:
       session:
         password: "Password"
+      product:
+        name: "Name"
+  activerecord:
+    errors:
+      models:
+        product:
+          attributes:
+            name:
+              blank: "is empty"
+            description_en:
+              blank: "is empty"
+            description_pt:
+              blank: "is empty"
+            category:
+              blank: "is empty"
+    attributes:
+      product:
+        name: "Name"
+        description_en: "English description"
+        description_pt: "Portuguese description"
+        category: "Category"
